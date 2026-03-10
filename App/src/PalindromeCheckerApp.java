@@ -1,35 +1,25 @@
 
-
-public class PalindromeCheckerApp {
+public class UseCase3PalindromeCheckerApp {
 
     /**
-     * Application entry point for UC2
+     * Application entry point for UC3
      * @param args Command-line arguments
      */
     public static void main(String[] args) {
 
-        // Hardcoded string
-        String word = "madam";
+        // Original string
+        String original = "level";
+        String reversed = "";
 
-        boolean isPalindrome = true;
-
-        int left = 0;
-        int right = word.length() - 1;
-
-        while (left < right) {
-            if (word.charAt(left) != word.charAt(right)) {
-                isPalindrome = false;
-                break;
-            }
-            left++;
-            right--;
+        // Reverse using for loop
+        for (int i = original.length() - 1; i >= 0; i--) {
+            reversed = reversed + original.charAt(i);
         }
 
-        // Display result
-        if (isPalindrome) {
-            System.out.println("The word \"" + word + "\" is a Palindrome.");
+        // Compare using equals()
+        if (original.equals(reversed)) {
+            System.out.println("The word \"" + original + "\" is a Palindrome.");
         } else {
-            System.out.println("The word \"" + word + "\" is NOT a Palindrome.");
+            System.out.println("The word \"" + original + "\" is NOT a Palindrome.");
         }
-    }
-}
+    }}
