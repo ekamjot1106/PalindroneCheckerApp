@@ -25,7 +25,8 @@ public class UseCase6PalindromeCheckerApp {
         boolean isPalindrome = true;
 
         // Compare dequeue vs pop
-        for (int i = 0; i < word.length(); i++) {
+        for (int i = 0; i < word.length(); i++)
+        {
             if (queue.remove() != stack.pop()) {
                 isPalindrome = false;
                 break;
